@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen Advisory | Demo Website</title>
+<meta name="description" content="Demo website for a fictional business-setup consultancy. Portfolio sample by Noah Josiah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16181d;--muted:#5a5f69;--brick:#b4472a;--soft:#f4f2ee;--line:#dedbd4;--white:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:16px;flex-wrap:wrap}
+.logo{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.35rem;text-decoration:none}
+.logo b{color:var(--brick)}
+nav a{margin-left:24px;text-decoration:none;font-size:.92rem;color:var(--muted)}
+nav a:hover{color:var(--brick)}
+.hero{padding:96px 0 80px}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brick);font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);max-width:13ch}
+.hero p{max-width:50ch;margin:26px 0 34px;font-size:1.2rem;color:var(--muted)}
+.btn{display:inline-block;background:var(--ink);color:var(--white);padding:14px 26px;font-weight:500;text-decoration:none;border-radius:2px}
+.btn:hover{background:var(--brick)}
+.link{margin-left:22px;font-weight:500}
+.band{border-top:1px solid var(--line);padding:72px 0}
+.band.soft{background:var(--soft)}
+.row{display:grid;grid-template-columns:240px 1fr;gap:40px}
+.row > h2{font-size:1.9rem;position:sticky;top:90px;align-self:start}
+.svc{border-top:1px solid var(--line);padding:24px 0;display:grid;grid-template-columns:56px 1fr;gap:12px}
+.svc:first-child{border-top:0;padding-top:0}
+.svc span{font-family:Fraunces,Georgia,serif;color:var(--brick);font-size:1.3rem}
+.svc h3{font-size:1.35rem;margin-bottom:6px}
+.svc p{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps div{border-top:3px solid var(--ink);padding-top:16px}
+.steps h3{font-size:1.2rem;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:.97rem}
+details{border-top:1px solid var(--line);padding:18px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--brick);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--muted);max-width:60ch}
+.cta{background:var(--ink);color:var(--white);padding:80px 0}
+.cta h2{font-size:clamp(2rem,5vw,3.2rem);max-width:16ch;margin-bottom:20px}
+.cta p{color:#c4c7cf;max-width:50ch;margin-bottom:28px}
+.cta .btn{background:var(--brick)}
+.cta .btn:hover{background:#d0583a}
+footer{font-size:.88rem;color:var(--muted);padding:22px 0}
+footer strong{color:var(--ink)}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:24px}.row>h2{position:static}.steps{grid-template-columns:1fr}.hero{padding:60px 0 50px}nav a{margin:0 16px 0 0}.link{display:block;margin:16px 0 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Lumen<b>.</b>Advisory</a>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#process">Process</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Company setup for new founders</p>
+      <h1>Start your company on solid ground.</h1>
+      <p>Lumen Advisory guides first-time founders through registering a business, opening the right accounts, and meeting the rules that apply to them, in plain language and on a clear timeline.</p>
+      <a class="btn" href="#contact">Book a free intro call</a><a class="link" href="#services">See what we do</a>
+    </div>
+  </section>
+
+  <section id="services" class="band">
+    <div class="wrap row">
+      <h2>Services</h2>
+      <div>
+        <div class="svc"><span>01</span><div><h3>Company registration</h3><p>We help you choose a structure, prepare the documents, and file with the registry, then hand you a clear file of everything submitted.</p></div></div>
+        <div class="svc"><span>02</span><div><h3>Business setup</h3><p>Tax registration, a business bank account, and a simple record-keeping routine, so your first invoice is not your first problem.</p></div></div>
+        <div class="svc"><span>03</span><div><h3>Regulatory checks</h3><p>We identify the licences and permits your type of business may need before you start trading, and explain what each one involves.</p></div></div>
+        <div class="svc"><span>04</span><div><h3>Ongoing support</h3><p>Deadline reminders and annual filing help, so nothing slips once the company is running.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="band soft">
+    <div class="wrap">
+      <h2 style="margin-bottom:32px;font-size:1.9rem">How it works</h2>
+      <div class="steps">
+        <div><h3>1. Intro call</h3><p>You tell us what you plan to build. We tell you honestly what is involved and what it costs.</p></div>
+        <div><h3>2. We prepare and file</h3><p>You send the documents we list. We check, complete, and submit them, and keep you updated.</p></div>
+        <div><h3>3. You are ready to trade</h3><p>You receive your complete company file and a checklist for your first 90 days.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="band">
+    <div class="wrap row">
+      <h2>Common questions</h2>
+      <div>
+        <details><summary>How long does registration take?</summary><p>It depends on the country and company type. We give you a realistic estimate on the intro call, before you commit to anything.</p></details>
+        <details><summary>Do I need to be in the country to register?</summary><p>Often not, but rules vary. We check the requirements for your situation and tell you what can be done remotely.</p></details>
+        <details><summary>What documents will you ask for?</summary><p>Usually identification, proof of address, and details of the company name, activity, and owners. You get an exact list up front.</p></details>
+        <details><summary>Is the intro call really free?</summary><p>Yes. It is a short conversation to see whether we are a good fit, with no obligation.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="wrap">
+      <h2>Tell us what you want to start.</h2>
+      <p>Send a few lines about your business idea and where you plan to operate. We reply within two working days.</p>
+      <a class="btn" href="mailto:hello@lumenadvisory.example">hello@lumenadvisory.example</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><strong>Demo site.</strong> Lumen Advisory is a fictional company created as a design sample. No real business or client data. Designed by Noah Josiah.</div>
+</footer>
+</body>
+</html>
